@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="zh">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="popup.css" />
+    <title>TUM Moodle Archive</title>
+  </head>
+  <body>
+    <header class="bar">
+      <div class="brand"><span class="mark">TUM</span> <span data-i18n="title"></span></div>
+      <select id="lang" class="lang"></select>
+    </header>
+
+    <div class="actions">
+      <button id="scan" class="btn" data-i18n="scan"></button>
+      <button id="reset" class="ghost" data-i18n="reset"></button>
+      <span id="status" class="status"></span>
+    </div>
+
+    <div id="scanprog" class="progress hidden">
+      <div class="bar2"><div id="scanfill"></div></div>
+      <div class="prow"><span id="scancounts" class="counts"></span><button id="cancelScan" class="ghost" data-i18n="cancel"></button></div>
+    </div>
+
+    <div id="summary" class="summary hidden"></div>
+
+    <section id="filters" class="filters hidden">
+      <div class="ftitle" data-i18n="filtersType"></div>
+      <div id="types" class="types"></div>
+      <label class="exam"><input type="checkbox" id="examOnly" /> <span data-i18n="examOnly"></span></label>
+      <div class="treebar">
+        <button class="mini" id="selAll" data-i18n="selectAll"></button>
+        <button class="mini" id="selNone" data-i18n="selectNone"></button>
+      </div>
+      <div id="tree" class="tree"></div>
+    </section>
+
+    <div id="dlrow" class="actions hidden">
+      <button id="download" class="btn solid" data-i18n="download"></button>
+      <span id="selcount" class="selcount"></span>
+    </div>
+    <div id="progress" class="progress hidden">
+      <div class="bar2"><div id="fill"></div></div>
+      <div class="prow"><span id="counts" class="counts"></span><button id="cancel" class="ghost" data-i18n="cancel"></button></div>
+    </div>
+    <div id="failures" class="failures hidden"></div>
+
+    <details class="adv hidden" id="advBox">
+      <summary>⚙</summary>
+      <label><input type="checkbox" id="redownload" /> <span data-i18n="redownload"></span></label>
+    </details>
+
+    <footer class="foot">
+      <details class="about">
+        <summary data-i18n="moreInfo"></summary>
+        <p class="about-line" data-i18n="footNote"></p>
+        <p class="about-line" data-i18n="aboutNote"></p>
+      </details>
+    </footer>
+    <script type="module" src="popup.js"></script>
+  </body>
+</html>

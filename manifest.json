@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "TUM Moodle Archive",
+  "version": "0.1.0",
+  "description": "Scan and archive your own TUM Moodle course files to local folders, for personal Moodle archive use. Uses your existing login; nothing is uploaded.",
+  "permissions": ["downloads", "storage", "scripting", "tabs"],
+  "host_permissions": ["https://www.moodle.tum.de/*"],
+  "background": {
+    "service_worker": "src/sw.js",
+    "type": "module"
+  },
+  "action": {
+    "default_title": "TUM Moodle Archive",
+    "default_popup": "popup/popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}

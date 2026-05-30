@@ -1,0 +1,35 @@
+# ── Never commit downloaded course material ──────────────────────────────
+# This tool downloads copyrighted TUM course files to each user's OWN machine.
+# Those files must never be redistributed or committed to this repo.
+TUM_Archive/
+*.pdf
+*.zip
+*.pptx
+*.docx
+*.mp4
+downloads/
+archive/
+
+# ── Never commit anything that could leak a session ──────────────────────
+*cookie*
+*cookies*
+*session*
+*token*
+*.sqlite
+*.har
+
+# ── Scan / download logs the tool may emit ───────────────────────────────
+*_scan_log.json
+*_download_failures.json
+
+# ── Internal planning docs (not for the public repo) ─────────────────────
+BRIEF.md
+WORK_NOTE*.md
+
+# ── OS / editor noise ────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.log
+node_modules/

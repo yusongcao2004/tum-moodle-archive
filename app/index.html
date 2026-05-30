@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="zh">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="app.css" />
+    <title>TUM Moodle Archive</title>
+  </head>
+  <body>
+    <!-- Front-end PROTOTYPE. Mock data, no real Moodle access. -->
+    <div class="sheet">
+      <header class="masthead">
+        <div class="mast-id">
+          <span class="wordmark">TUM</span>
+          <span class="mast-meta">Moodle Archive</span>
+        </div>
+        <nav class="lang-nav">
+          <button class="lang-opt" data-lang="zh">中文</button>
+          <span class="sep">/</span>
+          <button class="lang-opt" data-lang="en">EN</button>
+        </nav>
+      </header>
+
+      <div class="title-block">
+        <h1 data-i18n="title">Moodle Archive</h1>
+        <p class="lede" data-i18n="tagline"></p>
+      </div>
+
+      <hr class="rule-heavy" />
+
+      <!-- 01 SCAN -->
+      <section class="step">
+        <div class="step-no">01</div>
+        <div class="step-main">
+          <h2 data-i18n="scanH"></h2>
+          <p class="note" data-i18n="scanHint"></p>
+          <div class="action-row">
+            <button id="scan" class="btn" data-i18n="scan"></button>
+            <span id="scan-status" class="scan-status"></span>
+          </div>
+        </div>
+      </section>
+
+      <hr />
+
+      <!-- SELECT -->
+      <section class="grid">
+        <aside class="filters">
+          <div class="fset">
+            <div class="label" data-i18n="fSemester"></div>
+            <label class="opt"><input type="checkbox" checked /> <span data-i18n="all"></span></label>
+            <label class="opt"><input type="checkbox" checked /> SoSe 2026</label>
+            <label class="opt"><input type="checkbox" checked /> WiSe 2025/26</label>
+            <label class="opt"><input type="checkbox" checked /> SoSe 2025</label>
+            <label class="opt"><input type="checkbox" /> WiSe 2024/25</label>
+          </div>
+          <div class="fset">
+            <div class="label" data-i18n="fType"></div>
+            <label class="opt"><input type="checkbox" checked /> <span data-i18n="tLectures"></span></label>
+            <label class="opt"><input type="checkbox" checked /> <span data-i18n="tExercises"></span></label>
+            <label class="opt"><input type="checkbox" checked /> <span data-i18n="tSolutions"></span></label>
+            <label class="opt"><input type="checkbox" checked /> Altklausuren</label>
+            <label class="opt"><input type="checkbox" checked /> <span data-i18n="tFormula"></span></label>
+            <label class="opt"><input type="checkbox" checked /> <span data-i18n="tScripts"></span></label>
+            <label class="opt"><input type="checkbox" /> <span data-i18n="tOther"></span></label>
+          </div>
+          <div class="fset">
+            <div class="label" data-i18n="fQuick"></div>
+            <button class="quick" data-i18n="qExams"></button>
+            <button class="quick" data-i18n="qSlides"></button>
+          </div>
+        </aside>
+
+        <section class="listing">
+          <div class="listing-head">
+            <div class="label" data-i18n="courses"></div>
+            <span id="sel-summary" class="sel-summary" data-i18n="selectHint"></span>
+          </div>
+          <div id="tree" class="tree empty">
+            <p class="empty-state" data-i18n="emptyState"></p>
+          </div>
+        </section>
+      </section>
+
+      <hr />
+
+      <!-- ROADMAP -->
+      <section class="roadmap">
+        <div class="label" data-i18n="featuresTitle"></div>
+        <ol class="road-list">
+          <li><span class="r-no">01</span><span class="r-name" data-i18n="fVideo"></span><span class="r-desc" data-i18n="fVideoD"></span><span class="r-stat" data-i18n="soon"></span></li>
+          <li><span class="r-no">02</span><span class="r-name" data-i18n="fCal"></span><span class="r-desc" data-i18n="fCalD"></span><span class="r-stat" data-i18n="soon"></span></li>
+          <li><span class="r-no">03</span><span class="r-name" data-i18n="fKeep"></span><span class="r-desc" data-i18n="fKeepD"></span><span class="r-stat" data-i18n="soon"></span></li>
+          <li><span class="r-no">04</span><span class="r-name" data-i18n="fSync"></span><span class="r-desc" data-i18n="fSyncD"></span><span class="r-stat" data-i18n="soon"></span></li>
+        </ol>
+      </section>
+
+      <hr class="rule-heavy" />
+
+      <!-- 02 DOWNLOAD -->
+      <section class="step">
+        <div class="step-no">02</div>
+        <div class="step-main">
+          <div class="action-row">
+            <button id="download" class="btn solid" data-i18n="download"></button>
+            <div class="progress hidden" id="progress">
+              <div class="bar"><div id="fill"></div></div>
+              <div class="counts"><span id="pcount">0 / 0</span> <span id="pmeta"></span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="colophon">
+        <details class="about">
+          <summary data-i18n="moreInfo"></summary>
+          <p class="about-line" data-i18n="footNote"></p>
+          <p class="about-line" data-i18n="aboutNote"></p>
+        </details>
+        <a href="#" data-i18n="help"></a>
+      </footer>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
